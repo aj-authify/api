@@ -36,7 +36,6 @@ async def login_set(login_data: LoginSet):
         return verifier.tpo_already_exists(login_data.phone_number)
 
     tpo_code = await tpo.new_tpo(login_data.phone_number, mongodb_init["collection"])
-
     if not tpo_code["ok"]:
         return verifier.tpo_failed_to_generate(login_data.phone_number)
 
