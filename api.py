@@ -22,9 +22,6 @@ mongodb_init = mongodb.setup_mongodb()
 
 @app.post("/login/set")
 async def login_set(login_data: LoginSet):
-    if not mongodb_init["ok"]:
-        raise HTTPException(status_code=500, detail="Database connection failed")
-
     valid = phone_number.is_valid(login_data.phone_number)
     if not valid:
         return verifier.non_valid_phone_number
@@ -44,9 +41,6 @@ async def login_set(login_data: LoginSet):
 
 @app.get("/login/verify")
 async def login_verify(login_data: LoginVerify):
-    if not mongodb_init["ok"]:
-        raise HTTPException(status_code=500, detail="Database connection failed")
-
     valid_tpo = tpo.is_valid(login_data.tpo)
     if not valid_tpo:
         return verifier.tpo_non_valid()
