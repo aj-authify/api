@@ -9,7 +9,7 @@ import verifier
 app = FastAPI()
 
 
-class LoginSet(BaseModel):
+class TPOGenerate(BaseModel):
     website: str
     phone_number: str
 
@@ -17,8 +17,8 @@ class LoginSet(BaseModel):
 mongodb_init = mongodb.setup_mongodb()
 
 
-@app.post("/login/set")
-async def login_set(login_data: LoginSet):
+@app.post("/tpo/generate")
+async def tpo_generate(login_data: TPOGenerate):
     valid_phone_number = phone_number.is_valid(login_data.phone_number)
     if not valid_phone_number:
         return verifier.non_valid_phone_number
@@ -44,14 +44,14 @@ async def login_set(login_data: LoginSet):
     return verifier.tpo_generated(login_data.phone_number, login_data.website)
 
 
-class LoginVerify(BaseModel):
+class TPOVerify(BaseModel):
     website: str
     phone_number: str
     tpo: constr(min_length=6, max_length=6)
 
 
-@app.get("/login/verify")
-async def login_verify(login_data: LoginVerify):
+@app.get("/tpo/verify")
+async def tpo_verify(login_data: TPOVerify):
     valid_tpo = tpo.is_valid(login_data.tpo)
     if not valid_tpo:
         return verifier.tpo_non_valid
