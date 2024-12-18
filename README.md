@@ -48,7 +48,3 @@ Verify the TPO code for a phone number and website.
 - **Secure Storage**: MongoDB is used for secure and reliable data handling.
 
 ---
-
-## Ready for Use
-Authify API is fully functional and ready to use locally. Developers can run it on their systems to integrate phone number-based authentication seamlessly into their websites.  
-We are actively preparing for deployment and will be launching Authify soon to make it globally accessible. Stay tuned for updates!
