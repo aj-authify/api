@@ -13,6 +13,10 @@ This API is built with **FastAPI** for quick and scalable development, and uses 
 ## Endpoints
 
 ### `POST /tpo/generate`
+```
+https://api-hj87.onrender.com/tpo/generate
+```
+
 Generate a TPO code for a phone number and website.
 
 #### Request
@@ -26,7 +30,10 @@ Generate a TPO code for a phone number and website.
 
 ---
 
-### `GET /tpo/verify`
+### `POST /tpo/verify`
+```
+https://api-hj87.onrender.com/tpo/verify
+```
 Verify the TPO code for a phone number and website.
 
 #### Request
