@@ -60,7 +60,7 @@ class TPOVerify(BaseModel):
     tpo: constr(min_length=6, max_length=6)
 
 
-@app.get("/tpo/verify")
+@app.post("/tpo/verify")
 async def tpo_verify(login_data: TPOVerify):
     valid_tpo = tpo.is_valid(login_data.tpo)
     if not valid_tpo:
