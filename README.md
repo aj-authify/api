@@ -6,7 +6,7 @@ Authify API provides a simple, secure way to manage phone number-based authentic
 
 Authify API offers two key endpoints for managing authentication:
 1. **POST**: Generate a TPO code for a specific phone number and website.
-2. **GET**: Verify the TPO code to validate user login.
+2. **POST**: Verify the TPO code to validate user login.
 
 This API is built with **FastAPI** for quick and scalable development, and uses **MongoDB** for secure data storage.
 
