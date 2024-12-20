@@ -9,6 +9,15 @@ import verifier
 app = FastAPI()
 
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["GET", "POST"],
+    allow_headers=["*"],
+)
+
+
 class TPOGenerate(BaseModel):
     website: str
     phone_number: str
