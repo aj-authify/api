@@ -1,6 +1,6 @@
 # Authify API
 
-Authify API provides a simple, secure way to manage phone number-based authentication for websites. It supports generating and verifying TPO (Temporary Passcode) codes for user authentication.
+netAuthify provides a simple, secure way to manage phone number-based authentication for websites. It supports generating and verifying OTP (One-time password) codes for user authentication.
 
 ## Overview
 
@@ -14,7 +14,7 @@ This API is built with **FastAPI** for quick and scalable development, and uses 
 
 ### `POST /tpo/generate`
 ```
-https://api-hj87.onrender.com/tpo/generate
+https://authify-api-ame4edcncxbugrbc.eastus-01.azurewebsites.net/tpo/generate
 ```
 
 Generate a TPO code for a phone number and website.
@@ -32,7 +32,7 @@ Generate a TPO code for a phone number and website.
 
 ### `POST /tpo/verify`
 ```
-https://api-hj87.onrender.com/tpo/verify
+https://authify-api-ame4edcncxbugrbc.eastus-01.azurewebsites.net/tpo/verify
 ```
 Verify the TPO code for a phone number and website.
 
