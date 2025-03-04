@@ -1,6 +1,6 @@
 # Authify API
 
-netAuthify provides a simple, secure way to manage phone number-based authentication for websites. It supports generating and verifying OTP (One-time password) codes for user authentication.
+Authify provides a simple, secure way to manage phone number-based authentication for websites. It supports generating and verifying OTP (One-time password) codes for user authentication.
 
 ## Overview
 
